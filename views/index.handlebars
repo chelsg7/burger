@@ -1,27 +1,27 @@
 <div class="container">
-  <div class="text-center bg-light card p-3 mb-3">
-    <h1 class="display-1 text-dark">
+  <div class="text-center bg-secondary card p-3 mb-3 mt-5">
+    <h1 class="h1 text-danger">
       Eat-Da-Burger!
     </h1>
-    <div>
+    {{!-- <div>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoGgwDprAU320eCmlpHmt6HyyVpCGLKP0xD3JTq_b4cMPdUlDZ0g" height="100px" class=" p-1 border border-dark rounded">
-    </div>
+    </div> --}}
   </div>
   <div class = "row text-center">
     <div class="col col-md-6">
-      <div id="currentB" class="bg-primary card p-3 my-3">
-        <h2 class= "display-4">
+      <div id="currentB" class="bg-dark card p-3 my-3">
+        <h2 class= "h2 mb-4 text-white">
           Current Burgers:
         </h2>
         <ul>
           {{#each burgers}}
             {{#unless devoured}}
-          <li class="lead text-white nodevoured">
+          <li class="h4 text-white nodevoured">
             {{burger_name}}
-            <button class="btn btn-success btn-lg border border-dark change-status" data-id="{{id}}" >
+            <button class="btn btn-success btn-lg border change-status" data-id="{{id}}" >
               EAT IT!
             </button>
-            <button class="btn btn-danger btn-lg border border-dark delete-burger" data-id="{{id}}">
+            <button class="btn btn-danger btn-lg border delete-burger" data-id="{{id}}">
               DELETE IT!
             </button>
           </li>
@@ -29,26 +29,26 @@
           {{/each}}
         </ul>
       </div><!-- end current burgers-->
-      <div id="addB" class="bg-warning card my-3 p-3">
-        <h2 class="display-4">
+      <div id="addB" class="bg-success card my-3 p-3">
+        <h2 class="h2 mb-4 text-white">
           Add a Burger
         </h2>
         <form class="create-form">
           <div class="form-group">
-            <label for="ca" class="lead">
+            <label for="ca" class="h4 text-white">
               Burger Name:
             </label>
             <input type="text" id="ca" name="burgerName">
           </div>
-          <button type="submit" class="btn btn-warning btn-lg border border-dark">
+          <button type="submit" class="btn btn-lg border btn-dark">
             Add a Burger
           </button>
         </form>
       </div>
     </div><!-- end col6-->
     <div class=" col col-md-6">
-      <div class ="bg-dark card p-5 my-3">
-        <h2 class="display-4 text-warning">
+      <div class ="bg-dark card my-3">
+        <h2 class="h2 text-danger mb-4 pt-4">
           Burgers You Ate:
         </h2>
         <ul>
