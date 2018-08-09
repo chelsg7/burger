@@ -1,16 +1,16 @@
 <div class="container">
-  <div class="text-center bg-secondary card p-3 mb-3 mt-5">
-    <h1 class="h1 text-danger">
+  <div class="text-center p-3 mb-3 mt-5">
+    <h1 class="display-3 text-warning">
       Eat-Da-Burger!
     </h1>
     {{!-- <div>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoGgwDprAU320eCmlpHmt6HyyVpCGLKP0xD3JTq_b4cMPdUlDZ0g" height="100px" class=" p-1 border border-dark rounded">
     </div> --}}
   </div>
-  <div class = "row text-center">
+  <div class = "row text-center" >
     <div class="col col-md-6">
-      <div id="currentB" class="bg-dark card p-3 my-3">
-        <h2 class= "h2 mb-4 text-white">
+      <div id="currentB" class="p-3 my-3">
+        <h2 class= "h2 mb-4 text-warning">
           Current Burgers:
         </h2>
         <ul>
@@ -29,8 +29,8 @@
           {{/each}}
         </ul>
       </div><!-- end current burgers-->
-      <div id="addB" class="bg-success card my-3 p-3">
-        <h2 class="h2 mb-4 text-white">
+      <div id="addB" class="my-3 p-3">
+        <h2 class="h2 mb-4 text-warning">
           Add a Burger
         </h2>
         <form class="create-form">
@@ -40,21 +40,21 @@
             </label>
             <input type="text" id="ca" name="burgerName">
           </div>
-          <button type="submit" class="btn btn-lg border btn-dark">
+          <button type="submit" class="btn btn-lg border btn-danger">
             Add a Burger
           </button>
         </form>
       </div>
     </div><!-- end col6-->
     <div class=" col col-md-6">
-      <div class ="bg-dark card my-3">
-        <h2 class="h2 text-danger mb-4 pt-4">
+      <div class ="my-3">
+        <h2 class="h2 text-warning mb-4 pt-4">
           Burgers You Ate:
         </h2>
         <ul>
           {{#each burgers}}
             {{#if devoured}}
-            <li class="text-white lead devoured">
+            <li class="text-white lead devoured col-8 mx-auto">
               {{burger_name}}
             </li> 
           {{/if}}
@@ -64,3 +64,10 @@
     </div><!-- end col6-->
   </div> <!-- end row-->
 </div><!-- end container-->
+<footer class="footer fixed-bottom">
+  <h4 class="text-warning text-center">
+    &copy;
+    &nbsp;
+    2018 Chelsea Gieck
+  </h4>
+</footer>
